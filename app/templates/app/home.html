@@ -1,0 +1,501 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="top-nav-bar">
+    <div class="search-box">
+        <i class="fa fa-bars" id="menu-btn" onclick="openmenu()"></i>
+        <i class="fa fa-times" id="close-btn" onclick="closemenu()"></i>
+
+        <img src="{% static 'images/wrench.jpg' %}" class="logo">
+        <input type=text class="form-control">
+        <span class="input-group-text"><i class="fa fa-search"></i></span>
+    </div>
+
+    </div>
+    </div>
+
+<div class="slider">
+    <div id="slider" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'images/device.jpg' %}" class="d-block w-100">
+          </div>
+        </div>
+            <ol class="carousel-indicators">
+              <li data-target="#slider" data-slide-to="0" class="active"></li>
+              <li data-target="#slider" data-slide-to="1"></li>
+              <li data-target="#slider" data-slide-to="2"></li>
+            </ol>
+      </div>
+</div>
+</section>
+    
+
+
+    <script>
+        function openmenu()
+        {
+            document.getElementById("side-menu").style.display="block";
+            document.getElementById("menu-btn").style.display="none";
+            document.getElementById("close-btn").style.display="block";
+        }
+        function closemenu()
+        {
+            document.getElementById("side-menu").style.display="none";
+            document.getElementById("menu-btn").style.display="block";
+            document.getElementById("close-btn").style.display="none";
+        }
+    </script>
+
+    <section class="featured-categories">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+            <img style="width: 245px; height: 247px;"alt="Image description"
+ src="{% static 'images/laptop1.jpg' %}"/>
+            </div>
+            <div class="col-md-4">
+                <img style="width: 245px; height: 247px;"alt="Image description"
+                src="{% static 'images/camera1.jpg' %}"/>
+            </div>
+            <div class="col-md-4">
+                <img style="width: 245px; height: 247px;"alt="Image description"
+                src="{% static 'images/tv2.jpg' %}"/>
+            </div>
+           </div>
+        </div>
+    </section>
+
+   <section class="on-sale">
+       <div class="container">
+           <div class="title-box">
+            <h2>On Sale</h2>
+           </div>
+           <div class="row">
+               <div class="col-md-3">
+               <div class="product-top">
+                   <img style="width: 245px; height: 247px;" src="{% static 'images/laptop1.jpg' %}">
+                   <div class="overlay-right">
+                   <button type="button" class="btn btn-secondary" title="Quick Shop">
+                       <i class="fa fa-eye"></i>
+                   </button>
+                   <button type="button" class="btn btn-secondary" title="Add to Wishlist">
+                    <i class="fa fa-heart-o"></i>
+                </button>
+                <button type="button" class="btn btn-secondary" title="Add to Cart">
+                    <i class="fa fa-shopping-cart"></i>
+                </button>
+               </div>
+                </div>
+           <div class="product-bottom text-center">
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star-half-o"></i>
+               <h3>Laptop</h3>
+               <h5>539.00</h5>
+           </div>
+           </div>
+
+           <div class="col-md-3">
+            <div class="product-top">
+                <img style="width: 245px; height: 247px;" src="{% static 'images/laptop1.jpg' %}">
+                <div class="overlay-right">
+                <button type="button" class="btn btn-secondary" title="Quick Shop">
+                    <i class="fa fa-eye"></i>
+                </button>
+                <button type="button" class="btn btn-secondary" title="Add to Wishlist">
+                 <i class="fa fa-heart-o"></i>
+             </button>
+             <button type="button" class="btn btn-secondary" title="Add to Cart">
+                 <i class="fa fa-shopping-cart"></i>
+             </button>
+            </div>
+             </div>
+        <div class="product-bottom text-center">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <h3>Laptop</h3>
+            <h5>669.00</h5>
+        </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="product-top">
+                <img style="width: 245px; height: 247px;" src="{% static 'images/laptop1.jpg' %}">
+                <div class="overlay-right">
+                <button type="button" class="btn btn-secondary" title="Quick Shop">
+                    <i class="fa fa-eye"></i>
+                </button>
+                <button type="button" class="btn btn-secondary" title="Add to Wishlist">
+                 <i class="fa fa-heart-o"></i>
+             </button>
+             <button type="button" class="btn btn-secondary" title="Add to Cart">
+                 <i class="fa fa-shopping-cart"></i>
+             </button>
+            </div>
+             </div>
+        <div class="product-bottom text-center">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <h3>Laptop</h3>
+            <h5>785.00</h5>
+        </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="product-top">
+                <img style="width: 245px; height: 247px;" src="{% static 'images/laptop1.jpg' %}">
+                <div class="overlay-right">
+                <button type="button" class="btn btn-secondary" title="Quick Shop">
+                    <i class="fa fa-eye"></i>
+                </button>
+                <button type="button" class="btn btn-secondary" title="Add to Wishlist">
+                 <i class="fa fa-heart-o"></i>
+             </button>
+             <button type="button" class="btn btn-secondary" title="Add to Cart">
+                 <i class="fa fa-shopping-cart"></i>
+             </button>
+            </div>
+             </div>
+        <div class="product-bottom text-center">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <h3>Laptop</h3>
+            <h5>1021.00</h5>
+        </div>
+        </div>
+
+               </div>
+           </div>
+   </section> 
+
+   <section class="new-products">
+    <div class="container">
+        <div class="title-box">
+         <h2>Brand New Products</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+            <div class="product-top">
+                <img style="width: 245px; height: 247px;" src="{% static 'images/laptop1.jpg' %}">
+                <div class="overlay-right">
+                <button type="button" class="btn btn-secondary" title="Quick Shop">
+                    <i class="fa fa-eye"></i>
+                </button>
+                <button type="button" class="btn btn-secondary" title="Add to Wishlist">
+                 <i class="fa fa-heart-o"></i>
+             </button>
+             <button type="button" class="btn btn-secondary" title="Add to Cart">
+                 <i class="fa fa-shopping-cart"></i>
+             </button>
+            </div>
+             </div>
+        <div class="product-bottom text-center">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <h3>Laptop</h3>
+            <h5>539.00</h5>
+        </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="product-top">
+                <img style="width: 245px; height: 247px;" src="{% static 'images/laptop1.jpg' %}">
+                <div class="overlay-right">
+                <button type="button" class="btn btn-secondary" title="Quick Shop">
+                    <i class="fa fa-eye"></i>
+                </button>
+                <button type="button" class="btn btn-secondary" title="Add to Wishlist">
+                 <i class="fa fa-heart-o"></i>
+             </button>
+             <button type="button" class="btn btn-secondary" title="Add to Cart">
+                 <i class="fa fa-shopping-cart"></i>
+             </button>
+            </div>
+             </div>
+        <div class="product-bottom text-center">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <h3>Laptop</h3>
+            <h5>669.00</h5>
+        </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="product-top">
+                <img style="width: 245px; height: 247px;" src="{% static 'images/laptop1.jpg' %}">
+                <div class="overlay-right">
+                <button type="button" class="btn btn-secondary" title="Quick Shop">
+                    <i class="fa fa-eye"></i>
+                </button>
+                <button type="button" class="btn btn-secondary" title="Add to Wishlist">
+                 <i class="fa fa-heart-o"></i>
+             </button>
+             <button type="button" class="btn btn-secondary" title="Add to Cart">
+                 <i class="fa fa-shopping-cart"></i>
+             </button>
+            </div>
+             </div>
+        <div class="product-bottom text-center">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <h3>Laptop</h3>
+            <h5>785.00</h5>
+        </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="product-top">
+                <img style="width: 245px; height: 247px;" src="{% static 'images/laptop1.jpg' %}">
+                <div class="overlay-right">
+                <button type="button" class="btn btn-secondary" title="Quick Shop">
+                    <i class="fa fa-eye"></i>
+                </button>
+                <button type="button" class="btn btn-secondary" title="Add to Wishlist">
+                 <i class="fa fa-heart-o"></i>
+             </button>
+             <button type="button" class="btn btn-secondary" title="Add to Cart">
+                 <i class="fa fa-shopping-cart"></i>
+             </button>
+            </div>
+             </div>
+        <div class="product-bottom text-center">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <h3>Laptop</h3>
+            <h5>1021.00</h5>
+        </div>
+        </div>
+
+        </div>
+        </div>
+
+
+      <div class="container">
+            <div class="title-box">
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                <div class="product-top">
+                    <img style="width: 245px; height: 247px;" src="{% static 'images/laptop1.jpg' %}">
+                    <div class="overlay-right">
+                    <button type="button" class="btn btn-secondary" title="Quick Shop">
+                        <i class="fa fa-eye"></i>
+                    </button>
+                    <button type="button" class="btn btn-secondary" title="Add to Wishlist">
+                     <i class="fa fa-heart-o"></i>
+                 </button>
+                 <button type="button" class="btn btn-secondary" title="Add to Cart">
+                     <i class="fa fa-shopping-cart"></i>
+                 </button>
+                </div>
+                 </div>
+            <div class="product-bottom text-center">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <h3>Laptop</h3>
+                <h5>539.00</h5>
+            </div>
+            </div>
+    
+            <div class="col-md-3">
+                <div class="product-top">
+                    <img style="width: 245px; height: 247px;" src="{% static 'images/laptop1.jpg' %}">
+                    <div class="overlay-right">
+                    <button type="button" class="btn btn-secondary" title="Quick Shop">
+                        <i class="fa fa-eye"></i>
+                    </button>
+                    <button type="button" class="btn btn-secondary" title="Add to Wishlist">
+                     <i class="fa fa-heart-o"></i>
+                 </button>
+                 <button type="button" class="btn btn-secondary" title="Add to Cart">
+                     <i class="fa fa-shopping-cart"></i>
+                 </button>
+                </div>
+                 </div>
+            <div class="product-bottom text-center">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <h3>Laptop</h3>
+                <h5>669.00</h5>
+            </div>
+            </div>
+    
+            <div class="col-md-3">
+                <div class="product-top">
+                    <img style="width: 245px; height: 247px;" src="{% static 'images/laptop1.jpg' %}">
+                    <div class="overlay-right">
+                    <button type="button" class="btn btn-secondary" title="Quick Shop">
+                        <i class="fa fa-eye"></i>
+                    </button>
+                    <button type="button" class="btn btn-secondary" title="Add to Wishlist">
+                     <i class="fa fa-heart-o"></i>
+                 </button>
+                 <button type="button" class="btn btn-secondary" title="Add to Cart">
+                     <i class="fa fa-shopping-cart"></i>
+                 </button>
+                </div>
+                 </div>
+            <div class="product-bottom text-center">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <h3>Laptop</h3>
+                <h5>785.00</h5>
+            </div>
+            </div>
+    
+            <div class="col-md-3">
+                <div class="product-top">
+                    <img style="width: 245px; height: 247px;" src="{% static 'images/laptop1.jpg' %}">
+                    <div class="overlay-right">
+                    <button type="button" class="btn btn-secondary" title="Quick Shop">
+                        <i class="fa fa-eye"></i>
+                    </button>
+                    <button type="button" class="btn btn-secondary" title="Add to Wishlist">
+                     <i class="fa fa-heart-o"></i>
+                 </button>
+                 <button type="button" class="btn btn-secondary" title="Add to Cart">
+                     <i class="fa fa-shopping-cart"></i>
+                 </button>
+                </div>
+                 </div>
+            <div class="product-bottom text-center">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <h3>Laptop</h3>
+                <h5>1021.00</h5>
+            </div>
+            </div>
+    
+            </div>
+            </div>
+   </section>
+
+
+<section class="website-features">
+    <div class="conatiner">
+    <div class="row">
+        <div class="col-md-3 feature-box">
+            <img src="{% static 'images/guarantee.jpg' %}">
+            <div class="feature-text">
+                <p><b>100% Original </b>are available</p>
+            </div>
+        </div>
+        <div class="col-md-3 feature-box">
+            <img src="{% static 'images/30days.jpg' %}">
+            <div class="feature-text">
+                <p><b>Return within 30 days </b>of receiving your order.</p>
+            </div>
+        </div>
+        <div class="col-md-3 feature-box">
+            <img src="{% static 'images/shipping.jpg' %}">
+            <div class="feature-text">
+                <p><b>Free delivery </b>on every order.</p>
+            </div>
+        </div>
+        <div class="col-md-3 feature-box">
+            <img src="{% static 'images/credit.jpg' %}">
+            <div class="feature-text">
+                <p><b>Pay Online </b>options(Card/Paypal)</p>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+<section class="footer">
+    <div class="container tex-center">
+        <div class="row">
+            <div class="col-md-3">
+                <h1>Links</h1>
+                <p>Privacy Policy</p>
+                <p>Return Policy</p>
+                <p>Discount Code</p>
+                <p>Terms of Use</p>
+            </div>
+            <div class="col-md-3">
+                <h1>Affiliate</h1>
+                <p>Company</p>
+                <p>About</p>
+                <p>Career</p>
+                <p>Contact Us</p>
+            </div>
+            <div class="col-md-3">
+                <h1>Follow Us On</h1>
+                <p><i class="fa fa-facebook-official"></i> Facebook</p>
+                <p><i class="fa fa-youtube-play"></i> Youtube</p>
+                <p><i class="fa fa-linkedin"></i> Linkedin</p>
+                <p><i class="fa fa-twitter"></i> Twitter</p>
+            </div>
+            <div class="col-md-3">
+                <h1>Follow Us On</h1>
+                <p><i class="fa fa-facebook-official"></i> Facebook</p>
+                <p><i class="fa fa-youtube-play"></i> Youtube</p>
+                <p><i class="fa fa-linkedin"></i> Linkedin</p>
+                <p><i class="fa fa-twitter"></i> Twitter</p>
+            </div>
+
+        </div>
+        <hr>
+        <p class="copyright">Made by Electronic Website</p>
+    </div>
+</section>
+
+
+
+
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+{% endblock %}

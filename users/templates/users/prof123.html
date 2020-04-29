@@ -1,0 +1,59 @@
+{% extends "app/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+      <div class="media">
+        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+        <div class="media-body">
+          <h2 class="account-heading">{{ user.username }}</h2>
+          <p class="text-secondary">{{ user.email }}</p>
+        </div>
+      </div>
+      <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <fieldset class="form-group">
+              <legend class="border-bottom mb-4">Profile Info</legend>
+              {{ u_form|crispy }}
+              {{ p_form|crispy }}
+          </fieldset>
+          <div class="form-group">
+              <button class="btn btn-outline-info" type="submit">Update</button>
+          </div>
+      </form>
+    </div>
+
+    <table class="table table-hover table-bordered text-center">
+      <tr class="text-center">
+        <th>Date Ordered</th>
+        <th>Reference Code</th>
+        <th>Items</th>
+        <th>Price</th>
+      </tr>
+      {% for order in my_orders %}
+        <tr>
+          <td>{{ order.date_ordered }}</td>
+          <td>{{ order.ref_code }}</td>
+          <td>
+        	{% for item in order.items.all %}
+        		{{ item.product.name }}
+      		{% endfor %}
+      	  </td>
+          <td>${{ order.get_cart_total }}</td>
+
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan= 4> You have no orders.</td>
+        </tr>
+      {% endfor %}
+
+      <tr>
+        <td colspan=4>
+          <a href="{% url 'app-home' %}" class="btn btn-warning pull-left">
+            {% if not order %}Continue Shopping{% else %}Add Items to Cart {% endif %}
+          </a> 
+        </td>
+      </tr>
+    </table>
+
+{% endblock content %}

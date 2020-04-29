@@ -1,0 +1,71 @@
+{% extends "app/base.html" %}
+{% block content %}
+<head>
+  <style>
+th, td{
+  text-align: left;
+  padding: 12px;
+  background-color: #f1f1f1;
+}
+
+tr{
+  border-bottom: 1px solid #ddd;
+}
+
+tr.header,  tr:hover{
+  background-color: #f1f1f1;
+}
+      </style>
+
+
+      </head>
+{% for post in posts %}
+<article class="media content-section">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="#">{{ post.author }}</a>
+      <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+    </div>
+    <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+    <p class="article-content">{{ post.content }}</p>
+  </div>
+</article>
+{% endfor %}
+
+
+<h1>Orders</h1>
+<table class="table table-hover table-bordered text-center">
+    <tr class="text-center">
+      <th>Date Ordered</th>
+      <th>Reference Code</th>
+      <th>Items</th>
+      <th>Price</th>
+    </tr>
+    {% for order in my_orders %}
+      <tr>
+        <td>{{ order.date_ordered }}</td>
+        <td>{{ order.ref_code }}</td>
+        <td>
+          {% for item in order.items.all %}
+              {{ item.product.name }}
+            {% endfor %}
+          </td>
+        <td>${{ order.get_cart_total }}</td>
+
+      </tr>
+    {% empty %}
+      <tr>
+        <td colspan= 4> You have no orders.</td>
+      </tr>
+    {% endfor %}
+
+    <tr>
+      <td colspan=4>
+       
+          {% if not order %}Continue Shopping{% else %}Add Items to Cart {% endif %}
+        </a> 
+      </td>
+    </tr>
+  </table>
+
+{% endblock content %}
