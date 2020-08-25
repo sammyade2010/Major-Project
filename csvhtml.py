@@ -5,16 +5,11 @@
 from prettytable import PrettyTable
 import pandas as pd 
   
-# to read csv file named "samplee" 
+# to read csv file named "prodnames" 
 a = pd.read_csv("prodnames.csv", sep='\t', encoding='utf8')
-
-#a = open("prodnames.csv", 'r', encoding='utf8') 
-  
-# read the csv file 
-#a = a.readlines() 
   
 # to save as html file 
-# named as "Table" 
+# named as "productsNew" 
 a.to_html("app/templates/app/productsNew.html") 
   
 # assign it to a  
